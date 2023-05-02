@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* base */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+    --primary-color:#28a745;
+    --light-color:#fff;
+    --secondary-color:#333;
+ 
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    /* background-color: var(--secondary-color);
+    color: var(--light-color); */
+}
+
+
+
+/* utilities */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+.grid-2{
+    grid-template-columns: repeat(2,1fr);
+}
+
+h1{
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+a{
+    color: var(--light-color);
+}
+a:hover{
+    text-decoration: none;
+    color: var(--light-color);
+}
+
+button.navbar-toggler{
+    color: var(--light-color);
+}
+
+.display-1{ 
+  font-size: calc(1.525rem + 2.0625vw);
+  font-weight: 800;
+  letter-spacing: -.03rem;
+  line-height: 105%;
+}
+.display-3{ 
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--light-color);
+}
+.display-4{ 
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--light-color);
+}
+.display-5{ 
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding-top: 5px;
+}
+
+.card-body{
+  text-align: center;
+  /* color: var(--light-color); */
+  color: var(--secondary-color);
+  border-radius: 10px;
+  border: #28a745 solid 2px;
+}
+
+.card-body:hover{
+  background-color: #333;
+  color: #fff;
+  
+}
+
+
+
+/* navbar */
+.navbar{
+    background-color: var(--secondary-color); 
+   
+}
+
+.nav-link
+{
+    color:white;
+}
+
+.nav-link.head:hover
+{   color: var(--light-color);
+    border-bottom: 2px var(--light-color) solid;
+}
+
+
+.dropdown-item:hover{
+   background-color: var(--primary-color);
+   color: var(--light-color);
+ }
+
+/* hero */
+ .hero {
+    background-color: var(--secondary-color);
+    background-image: url("images/b3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+ }
+
+.centered{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+/* stats */
+.stats {
+    padding: 50px 50px;
+    animation: slideInFromBottom 1s ease-in;
+    background-color:  var(--secondary-color);
+    color: var(--light-color);
+   
+  }
+  
+  .stats-heading {
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .stats .grid h3 {
+    font-size: 35px;
+  }
+  
+  .stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+
+/* directors */
+
+.owl-carousel{
+  padding: 2rem;
+  background-color: var(--secondary-color);
+}
+
+.owl-carousel .owl-item {
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item .card {
+    padding: 30px;
+    position: relative;
+}
+
+.owl-carousel .owl-stage-outer {
+    overflow-y: auto !important;
+    padding-bottom: 40px;
+}
+
+.owl-carousel .owl-item img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.owl-carousel .owl-item .card .name {
+    position: absolute;
+    bottom: -20px;
+    left: 33%;
+    color: var(--light-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color:var(--primary-color);
+    padding: 0.3rem 0.4rem;
+    border-radius: 5px;
+    box-shadow: 2px 3px 15px var(--primary-color);
+}
+
+.owl-carousel .owl-item .card {
+    opacity: 0.2;
+    transform: scale3d(0.8, 0.8, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item.active.center .card {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
+.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    height: 20px;
+    background: var(--primary-color) !important;
+    border-radius: 2px !important;
+    opacity: 0.8;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    height: 13px;
+    width: 13px;
+    opacity: 1;
+    transform: translateY(2px);
+    background: var(--light-color) !important;
+}
+
+@media(min-width: 480.6px) and (max-width: 575.5px) {
+    .owl-carousel .owl-item .card .name {
+        left: 24%;
+    }
+}
+
+@media(max-width: 360px) {
+    .owl-carousel .owl-item .card .name {
+        left: 30%;
+    }
+}
+
+
+
+.features-main .card > i {
+  margin-right: 20px;
+}
+
+.features-main .grid {
+  padding: 30px;
+}
+
+.features-main .grid > *:first-child {
+  grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(2) {
+  grid-column: 1 / span 2;
+}
+
